@@ -4,7 +4,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Ayoob Florival - System Diagnostics</title>
+        <title>Ayoob Florival - System Diagnostics</title>
         <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/live-styles.css">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"
+            rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <link rel="stylesheet" href="css/live-styles.css">
         <link
             href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"
@@ -14,6 +20,13 @@
     <body>
         <div class="container">
             <header>
+                <nav>
+                    <a href="index.html" class="logo">AF</a>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="live.html" class="active">Live</a></li>
+                    </ul>
+                </nav>
                 <nav>
                     <a href="index.html" class="logo">AF</a>
                     <ul>
@@ -73,6 +86,8 @@
                 <p>&copy; 2024 Ayoob Florival. All rights reserved.</p>
             </footer>
         </div>
+        <button class="dark-mode-toggle" id="darkModeToggle">🌓</button>
+        <script src="js/live-dashboard.js"></script>
         <button class="dark-mode-toggle" id="darkModeToggle">🌓</button>
         <script src="js/live-dashboard.js"></script>
     </body>
