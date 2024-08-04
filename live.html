@@ -3,47 +3,77 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ayoob Florival - Live</title>
+        <title>Ayoob Florival - System Diagnostics</title>
         <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/live-styles.css">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"
+            rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     </head>
     <body>
         <div class="container">
             <header>
-
+                <nav>
+                    <a href="index.html" class="logo">AF</a>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="live.html" class="active">Live</a></li>
+                    </ul>
+                </nav>
             </header>
+            <!--
+            <main class="live-dashboard">
+                <h1 class="page-title">System Diagnostics</h1>
 
-            <main>
+                <div class="dashboard-content">
+                    <section class="diagnostics-summary">
+                        <div class="summary-item">
+                            <h3>CPU Usage</h3>
+                            <p class="summary-value" id="cpuSummary">0%</p>
+                        </div>
+                        <div class="summary-item">
+                            <h3>Memory Usage</h3>
+                            <p class="summary-value" id="memorySummary">0 GB / 0
+                                GB</p>
+                        </div>
+                        <div class="summary-item">
+                            <h3>Network Traffic</h3>
+                            <p class="summary-value" id="networkSummary">0
+                                Mbps</p>
+                        </div>
+                        <div class="summary-item">
+                            <h3>Disk Usage</h3>
+                            <p class="summary-value" id="diskSummary">0%</p>
+                        </div>
+                    </section>
 
-            </main>
-
-            <footer>
-                <div class="footer-content">
-                    <div class="footer-links">
-                        <h3>More about me</h3>
-                        <ul>
-                            <li><a href="index.html#about">About</a></li>
-                            <li><a href="index.html#process">Process</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-links">
-                        <h3>I create</h3>
-                        <ul>
-                            <li><a href="index.html#design">Design</a></li>
-                            <li><a
-                                    href="index.html#development">Development</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-links">
-                        <h3>I'm on</h3>
-                        <ul>
-                            <li><a href="#" target="_blank">LinkedIn</a></li>
-                            <li><a href="#" target="_blank">Behance</a></li>
-                        </ul>
-                    </div>
+                    <section class="graphs-grid">
+                        <div class="graph-item">
+                            <h2>CPU Usage Over Time</h2>
+                            <canvas id="cpuChart"></canvas>
+                        </div>
+                        <div class="graph-item">
+                            <h2>Memory Usage Over Time</h2>
+                            <canvas id="memoryChart"></canvas>
+                        </div>
+                        <div class="graph-item">
+                            <h2>Network Traffic Over Time</h2>
+                            <canvas id="networkChart"></canvas>
+                        </div>
+                        <div class="graph-item">
+                            <h2>Disk I/O Over Time</h2>
+                            <canvas id="diskChart"></canvas>
+                        </div>
+                    </section>
                 </div>
+            </main>
+-->
+            <footer>
                 <p>&copy; 2024 Ayoob Florival. All rights reserved.</p>
             </footer>
         </div>
-        <script src="js/main.js"></script>
+        <button class="dark-mode-toggle" id="darkModeToggle">🌓</button>
+        <script src="js/live-dashboard.js"></script>
     </body>
 </html>
