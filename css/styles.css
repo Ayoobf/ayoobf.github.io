@@ -108,6 +108,7 @@ main {
 }
 
 h1 {
+  user-select: none;
   font-size: 4rem;
   margin-bottom: 1rem;
   letter-spacing: -1px;
@@ -133,11 +134,13 @@ h1:hover {
   justify-content: center;
   gap: 1rem;
   animation: fadeInUp 1s ease-out 0.4s both;
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
 }
 
 .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center; /* Center text and icons */
   padding: 0.75rem 1.5rem;
   background-color: transparent;
   color: var(--text-color);
@@ -146,6 +149,20 @@ h1:hover {
   border-radius: 50px;
   transition: all var(--transition-speed) ease;
   font-weight: 600;
+  min-width: 120px; /* Ensure buttons have a minimum width */
+  text-align: center; /* Center text for multi-line buttons */
+  margin: 0.5rem; /* Add some margin for when buttons wrap */
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  border-color: var(--accent-color);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(204, 0, 51, 0.3);
+  outline: none; /* Remove default focus outline */
 }
 
 .btn:hover {
@@ -175,6 +192,15 @@ footer {
   color: var(--secondary-color);
   border-top: 1px solid rgba(95, 106, 114, 0.2);
 }
+@media (hover: none) {
+  .btn:active {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border-color: var(--accent-color);
+    transform: translateY(1px); /* Slight push effect on tap */
+    box-shadow: 0 2px 8px rgba(204, 0, 51, 0.3);
+  }
+}
 
 @media (max-width: 768px) {
   h1 {
@@ -187,10 +213,13 @@ footer {
 
   .cta-group {
     flex-direction: column;
+    align-items: stretch; /* Full-width buttons on mobile */
   }
 
   .btn {
-    width: 100%;
+    width: auto; /* Allow buttons to size naturally */
+    max-width: 100%; /* Ensure buttons don't overflow container */
+    padding: 1rem 1.5rem; /* Slightly larger touch target on mobile */
   }
 }
 
