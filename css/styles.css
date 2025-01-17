@@ -34,10 +34,21 @@ header {
   padding: 2rem 0;
   position: sticky;
   top: 0;
-  background-color: rgba(18, 18, 18, 0.9);
+  background-color: #121212;
   backdrop-filter: blur(10px);
   z-index: 1000;
   transition: background-color var(--transition-speed) ease;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(10px);
+  z-index: -1;
 }
 
 nav {
