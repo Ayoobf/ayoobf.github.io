@@ -34,21 +34,9 @@ header {
   padding: 2rem 0;
   position: sticky;
   top: 0;
-  background-color: #121212;
-  backdrop-filter: blur(10px);
+  background-color: var(--bg-color);
   z-index: 1000;
   transition: background-color var(--transition-speed) ease;
-}
-
-header::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  backdrop-filter: blur(10px);
-  z-index: -1;
 }
 
 nav {
@@ -64,6 +52,12 @@ nav ul {
   gap: 2rem;
 }
 
+.logo-svg {
+  width: 100px;
+  height: auto;
+  max-width: 100%;
+}
+
 nav a {
   height: 50px;
   color: var(--text-color);
@@ -75,12 +69,7 @@ nav a {
   display: flex;
   align-items: center;
   text-shadow: 0 0 2px rgba(255, 255, 255, 0.2);
-}
-
-.logo-svg {
-  width: 100px; /* Adjust this value to change the logo size */
-  height: auto; /* This maintains the aspect ratio */
-  max-width: 100%; /* Ensures the logo doesn't overflow its container */
+  padding: 0 1rem;
 }
 
 nav a::after,
@@ -107,6 +96,7 @@ nav a:hover {
   color: var(--accent-color);
   text-shadow: 0 0 4px rgba(204, 0, 51, 0.4);
 }
+
 main {
   flex: 1;
   display: flex;
@@ -128,6 +118,7 @@ h1 {
     0 0 1px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.3);
   transition: text-shadow 0.25s ease;
 }
+
 h1:hover {
   text-shadow: 0 0 1px rgba(255, 255, 255, 0.8),
     0 0 15px rgba(255, 255, 255, 0.6), 0 0 35px rgba(255, 255, 255, 0.4);
@@ -145,13 +136,13 @@ h1:hover {
   justify-content: center;
   gap: 1rem;
   animation: fadeInUp 1s ease-out 0.4s both;
-  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+  flex-wrap: wrap;
 }
 
 .btn {
   display: inline-flex;
   align-items: center;
-  justify-content: center; /* Center text and icons */
+  justify-content: center;
   padding: 0.75rem 1.5rem;
   background-color: transparent;
   color: var(--text-color);
@@ -160,9 +151,9 @@ h1:hover {
   border-radius: 50px;
   transition: all var(--transition-speed) ease;
   font-weight: 600;
-  min-width: 120px; /* Ensure buttons have a minimum width */
-  text-align: center; /* Center text for multi-line buttons */
-  margin: 0.5rem; /* Add some margin for when buttons wrap */
+  min-width: 120px;
+  text-align: center;
+  margin: 0.5rem;
 }
 
 .btn:hover,
@@ -173,15 +164,7 @@ h1:hover {
   border-color: var(--accent-color);
   transform: translateY(-3px);
   box-shadow: 0 4px 15px rgba(204, 0, 51, 0.3);
-  outline: none; /* Remove default focus outline */
-}
-
-.btn:hover {
-  background-color: var(--accent-color);
-  color: var(--text-color);
-  border-color: var(--accent-color);
-  transform: translateY(-3px);
-  box-shadow: 0 4px 15px rgba(204, 0, 51, 0.3);
+  outline: none;
 }
 
 .btn-icon svg {
@@ -203,12 +186,13 @@ footer {
   color: var(--secondary-color);
   border-top: 1px solid rgba(95, 106, 114, 0.2);
 }
+
 @media (hover: none) {
   .btn:active {
     background-color: var(--accent-color);
     color: var(--text-color);
     border-color: var(--accent-color);
-    transform: translateY(1px); /* Slight push effect on tap */
+    transform: translateY(1px);
     box-shadow: 0 2px 8px rgba(204, 0, 51, 0.3);
   }
 }
@@ -224,13 +208,13 @@ footer {
 
   .cta-group {
     flex-direction: column;
-    align-items: stretch; /* Full-width buttons on mobile */
+    align-items: stretch;
   }
 
   .btn {
-    width: auto; /* Allow buttons to size naturally */
-    max-width: 100%; /* Ensure buttons don't overflow container */
-    padding: 1rem 1.5rem; /* Slightly larger touch target on mobile */
+    width: auto;
+    max-width: 100%;
+    padding: 1rem 1.5rem;
   }
 }
 
